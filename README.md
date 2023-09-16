@@ -63,7 +63,7 @@
 
 所以我要在這裡放一張好狐的圖
 
-![Shirakami Fubuki](https://tenor.com/view/fox-girl-shirakami-fubuki-fubukishirakami-gif-19974362)
+![Shirakami Fubuki]([https://tenor.com/view/fox-girl-shirakami-fubuki-fubukishirakami-gif-19974362](https://media.tenor.com/hpjA6qM7juMAAAAC/fox-girl.gif)https://media.tenor.com/hpjA6qM7juMAAAAC/fox-girl.gif)
 
 # 操你媽的蘋果汁
 
