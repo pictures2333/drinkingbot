@@ -584,8 +584,8 @@ async def checkresponse(interaction: discord.Interaction):
             for i in thedata['responses']: rs += f"| 回覆編{i['index']} | 座號{i['seatnum']} | {i['name']} | {i['sugar']} | {i['ice']} | 備註: {i['note']}\n\n"
             rs += "```"
 
-            if thedata['open'] == True: embed = discord.Embed(color = color, title = "[🔥填答進行中]表單詳細資訊", description=f"將在 {datetime.datetime.strptime(str(s['endtime']), '%Y%m%d%H%M%S')} 結束 | 回覆數: {len(s['responses'])} | 訊息提醒: {s['notify']}").add_field(name = "回覆資料", value = rs)
-            else: embed = discord.Embed(title = "[表單已結束]表單詳細資訊", color = color, description=f"已於 {datetime.datetime.strptime(str(s['endtime']), '%Y%m%d%H%M%S')} 結束 | 回覆數: {len(s['responses'])} | 訊息提醒: {s['notify']}").add_field(name = "回覆資料", value = rs)
+            if thedata['open'] == True: embed = discord.Embed(color = color, title = "[🔥填答進行中]表單詳細資訊", description=f"將在 {datetime.datetime.strptime(str(thedata['endtime']), '%Y%m%d%H%M%S')} 結束 | 回覆數: {len(thedata['responses'])} | 訊息提醒: {thedata['notify']}").add_field(name = "回覆資料", value = rs)
+            else: embed = discord.Embed(title = "[表單已結束]表單詳細資訊", color = color, description=f"已於 {datetime.datetime.strptime(str(thedata['endtime']), '%Y%m%d%H%M%S')} 結束 | 回覆數: {len(thedata['responses'])} | 訊息提醒: {thedata['notify']}").add_field(name = "回覆資料", value = rs)
             await interaction.response.send_message(embed = embed, ephemeral=True)
         except: await interaction.response.send_message(content = "執行錯誤: 請聯繫機器人管理者", ephemeral=True)
 
